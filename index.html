@@ -16,14 +16,14 @@
   <main class="container">
     <div class="row">
       <div class="col">
-        <img src="//placehold.it/600x800" onclick="makeWidget()" alt="Widget Maker X100">
+        <img src="//placehold.it/600x800" onclick="buildWidget()" alt="Widget Maker X100">
       </div>
       <div class="col">
         <div class="card text-white bg-success mb-3">
           <div class="card-header">Header</div>
           <div class="card-body">
-            <h5>You have built: 0 Widgets</h5>
-            <h5>Number of Upgrade1 available: 0 (+0 production)</h5>
+            <h5 id="widgetCounter">You have not built any widgets yet.</h5>
+            <h5 id="upgrade1Counter">Number of Upgrade1 installed: 0 (+0 production)</h5>
             <h5>Number of Upgrade2 available: 0 (+0 production)</h5>
             <h5>Number of Upgrade3 available: 0 (+0 production)</h5>
             <h5>Number of Upgrade4 available: 0 (+0 production)</h5>
@@ -32,7 +32,9 @@
         <div class="card text-white bg-info mb-3">
           <div class="card-header">Header</div>
           <div class="card-body">
-            <h5>Upgrade1: 10 Widgets (+1 production)</h5>
+            <p id="modelCounter">Current Widget Maker Model: X100</p>
+            <p>Upgrade to increase number of widgets per click.</p>
+            <button id="modelUpgradeButton" type="button" class="btn btn-light" onclick="purchaseUpgrade('model')">Upgrade to X200: Cost = 50 Widgets</button>
             <h5>Upgrade2: 20 Widgets (+5 production)</h5>
             <h5>Auto Upgrade3: 30 Widgets (+5 production - Automatic)</h5>
             <h5>Auto Upgrade4: 40 Widgets (+10 production - Automatic)</h5>

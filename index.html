@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week2 Checkpoint | Automated Widget Maker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="container-fluid d-flex justify-content-center bg-secondary text-light">
+    <h1>Widget Maker X100</h1>
+  </header>
+  <main class="container">
+    <div class="row">
+      <div class="col">
+        <img src="//placehold.it/600x800" onclick="makeWidget()" alt="Widget Maker X100">
+      </div>
+      <div class="col">
+        <div class="card text-white bg-success mb-3">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h5>You have built: 0 Widgets</h5>
+            <h5>Number of Upgrade1 available: 0 (+0 production)</h5>
+            <h5>Number of Upgrade2 available: 0 (+0 production)</h5>
+            <h5>Number of Upgrade3 available: 0 (+0 production)</h5>
+            <h5>Number of Upgrade4 available: 0 (+0 production)</h5>
+          </div>
+        </div>
+        <div class="card text-white bg-info mb-3">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h5>Upgrade1: 10 Widgets (+1 production)</h5>
+            <h5>Upgrade2: 20 Widgets (+5 production)</h5>
+            <h5>Auto Upgrade3: 30 Widgets (+5 production - Automatic)</h5>
+            <h5>Auto Upgrade4: 40 Widgets (+10 production - Automatic)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container-fluid d-flex justify-content-center bg-secondary text-light">
+    <p>By: Scott Miller 03-26-2021</p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>

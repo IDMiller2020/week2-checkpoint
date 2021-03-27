@@ -15,7 +15,7 @@
   </header>
   <main class="container">
     <div class="row">
-      <div class="col">
+      <div class="col d-flex align-self-center">
         <img id="widgetMachine" src="./7351140.jpg" onclick="buildWidget()" alt="Widget Maker X100">
       </div>
       <div class="col">
@@ -34,16 +34,16 @@
           <div class="card-body">
             <p id="modelCounter" class="p-0 m-0">Current Widget Maker Model: X100</p>
             <p class="p-0 mb-1">Upgrade to increase number of widgets per click.</p>
-            <button id="modelUpgradeButton" type="button" class="btn btn-light mb-4" onclick="purchaseUpgrade('model')">Upgrade model: Cost = 50 Widgets</button>
+            <button id="modelUpgradeButton" type="button" class="btn btn-light mb-4" onclick="purchaseManualUpgrade('model')">Upgrade model: Cost = 50 Widgets</button>
             <p id="powerModuleCounter" class="p-0 m-0">Current Number of Power Modules: 0</p>
             <p class="p-0 mb-1">Upgrade to increase number of widgets per click.</p>
-            <button id="powerUpgradeButton" type="button" class="btn btn-light mb-4" onclick="purchaseUpgrade('power')">Upgrade power: Cost = 100 Widgets</button>
+            <button id="powerUpgradeButton" type="button" class="btn btn-light mb-4" onclick="purchaseManualUpgrade('power')">Upgrade power: Cost = 100 Widgets</button>
             <p id="machineAICounter" class="p-0 m-0">Current Number of AI Upgrades: 0</p>
             <p class="p-0 mb-1">Upgrade to increase Widget Automation AI speed.</p>
-            <button id="machineAIUpgradeButton" type="button" class="btn btn-light mb-4" onclick="purchaseUpgrade('ai')">Upgrade power: Cost = 2000 Widgets</button>
+            <button id="machineAIUpgradeButton" type="button" class="btn btn-light mb-4" onclick="purchaseAutoUpgrade('ai')">Upgrade power: Cost = 2000 Widgets</button>
             <p id="quantumProcessorCounter" class="p-0 m-0">Current Number of Quantum Processor Upgrades: 0</p>
             <p class="p-0 mb-1">Upgrade to increase Widget Automation Efficiency.</p>
-            <button id="quantumProcessorUpgradeButton" type="button" class="btn btn-light mb-4" onclick="purchaseUpgrade('quantum')">Upgrade power: Cost = 10,000 Widgets</button>
+            <button id="quantumProcessorUpgradeButton" type="button" class="btn btn-light mb-4" onclick="purchaseAutoUpgrade('quantum')">Upgrade power: Cost = 10,000 Widgets</button>
           </div>
         </div>
       </div>

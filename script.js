@@ -4,8 +4,9 @@ let widgetBuilder = {
   model: {number: 0, upgradeCost: 50, clickMod: 1},
   power: {number: 0, upgradeCost: 100, clickMod: 10},
   ai: {number: 0, upgradeCost: 2000, clickMod: 20},
-  quantum: {number: 0, upgradeCost: 10000, clickMod: 50},
-  widgetsPerClick: 1
+  quantum: {number: 0, upgradeCost: 4000, clickMod: 50},
+  widgetsPerClick: 1,
+  automaticWidgets: 0
 };
 
 function buildWidget() {
@@ -13,7 +14,15 @@ function buildWidget() {
   document.getElementById('widgetCounter').innerText = `Widget Inventory: ${numOfWidgets} widgets`
 }
 
-function purchaseUpgrade(upgrade) {
+function buildAutoWidgets () {
+  setInterval(() => {
+    numOfWidgets += widgetBuilder.automaticWidgets
+    document.getElementById('widgetCounter').innerText = `Widget Inventory: ${numOfWidgets} widgets`
+  }, 3000);
+  draw()
+}
+
+function purchaseManualUpgrade(upgrade) {
   if (numOfWidgets >= widgetBuilder[upgrade].upgradeCost) {
     numOfWidgets -= widgetBuilder[upgrade].upgradeCost
     widgetBuilder[upgrade].number += 1
@@ -21,6 +30,16 @@ function purchaseUpgrade(upgrade) {
     widgetBuilder[upgrade].upgradeCost += widgetBuilder[upgrade].upgradeCost
   }
   draw()
+}
+
+function purchaseAutoUpgrade(upgrade) {
+  if (numOfWidgets >= widgetBuilder[upgrade].upgradeCost) {
+    numOfWidgets -= widgetBuilder[upgrade].upgradeCost
+    widgetBuilder[upgrade].number += 1
+    widgetBuilder.automaticWidgets += widgetBuilder[upgrade].clickMod
+    widgetBuilder[upgrade].upgradeCost += widgetBuilder[upgrade].upgradeCost
+  }
+  buildAutoWidgets()
 }
 
 function draw() {

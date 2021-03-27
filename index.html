@@ -11,7 +11,7 @@
 </head>
 <body>
   <header class="container-fluid d-flex justify-content-center bg-secondary text-light">
-    <h1>Widget Maker X100</h1>
+    <h1>Widget Maker</h1>
   </header>
   <main class="container">
     <div class="row">
@@ -20,24 +20,30 @@
       </div>
       <div class="col">
         <div class="card text-white bg-success mb-3">
-          <div class="card-header">Header</div>
+          <div class="card-header">Widget Machine Stats</div>
           <div class="card-body">
             <h5 id="widgetCounter">You have not built any widgets yet.</h5>
-            <h5 id="upgrade1Counter">Number of Upgrade1 installed: 0 (+0 production)</h5>
-            <h5>Number of Upgrade2 available: 0 (+0 production)</h5>
-            <h5>Number of Upgrade3 available: 0 (+0 production)</h5>
-            <h5>Number of Upgrade4 available: 0 (+0 production)</h5>
+            <h5 id="modelUpgradeCounter">+0 prduction for 0 model upgrades.</h5>
+            <h5 id="powerUpgradeCounter">+0 production for 0 power upgrades.</h5>
+            <h5 id="machineAIUpgradeCounter">+0 production for 0 Machine AI upgrades.</h5>
+            <h5 id="quantumProcessorUpgradeCounter">+0 production for 0 Quantum Processor Upgrades</h5>
           </div>
         </div>
         <div class="card text-white bg-info mb-3">
-          <div class="card-header">Header</div>
+          <div class="card-header">Widget Machine Upgrades</div>
           <div class="card-body">
             <p id="modelCounter">Current Widget Maker Model: X100</p>
             <p>Upgrade to increase number of widgets per click.</p>
-            <button id="modelUpgradeButton" type="button" class="btn btn-light" onclick="purchaseUpgrade('model')">Upgrade to X200: Cost = 50 Widgets</button>
-            <h5>Upgrade2: 20 Widgets (+5 production)</h5>
-            <h5>Auto Upgrade3: 30 Widgets (+5 production - Automatic)</h5>
-            <h5>Auto Upgrade4: 40 Widgets (+10 production - Automatic)</h5>
+            <button id="modelUpgradeButton" type="button" class="btn btn-light" onclick="purchaseUpgrade('model')">Upgrade model: Cost = 50 Widgets</button>
+            <p id="powerModuleCounter">Current Number of Power Modules: 0</p>
+            <p>Upgrade to increase number of widgets per click.</p>
+            <button id="powerUpgradeButton" type="button" class="btn btn-light" onclick="purchaseUpgrade('power')">Upgrade power: Cost = 100 Widgets</button>
+            <p id="machineAICounter">Current Number of AI Upgrades: 0</p>
+            <p>Upgrade to increase Widget Automation AI speed.</p>
+            <button id="machineAIUpgradeButton" type="button" class="btn btn-light" onclick="purchaseUpgrade('ai')">Upgrade power: Cost = 2000 Widgets</button>
+            <p id="quantumProcessorCounter">Current Number of Quantum Processor Upgrades: 0</p>
+            <p>Upgrade to increase Widget Automation Efficiency.</p>
+            <button id="quantumProcessorUpgradeButton" type="button" class="btn btn-light" onclick="purchaseUpgrade('quantum')">Upgrade power: Cost = 10,000 Widgets</button>
           </div>
         </div>
       </div>

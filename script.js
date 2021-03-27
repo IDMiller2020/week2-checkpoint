@@ -27,7 +27,7 @@ function draw() {
   document.getElementById('widgetCounter').innerText = `Widget Inventory: ${numOfWidgets} widgets`
 
   document.getElementById('modelUpgradeCounter').innerText = `+${(widgetBuilder.model.number * widgetBuilder.model.clickMod)} production for ${widgetBuilder.model.number} Model upgrades.`
-  document.getElementById('modelCounter').innerText = `Current Widget Maker Model: X${(widgetBuilder.model.number) * 100}`
+  document.getElementById('modelCounter').innerText = `Current Widget Maker Model: X${(widgetBuilder.model.number + 1) * 100}`
   document.getElementById('modelUpgradeButton').innerText = `Upgrade model: Cost = ${widgetBuilder.model.upgradeCost} Widgets`
 
   document.getElementById('powerUpgradeCounter').innerText = `+${(widgetBuilder.power.number * widgetBuilder.power.clickMod)} production for ${widgetBuilder.power.number} Power upgrades.`

@@ -1,4 +1,5 @@
 let numOfWidgets = 0
+let intervalRunning = false
 
 let widgetBuilder = {
   model: {number: 0, upgradeCost: 50, clickMod: 1},
@@ -15,11 +16,11 @@ function buildWidget() {
 }
 
 function buildAutoWidgets () {
+  intervalRunning = true
   setInterval(() => {
     numOfWidgets += widgetBuilder.automaticWidgets
     document.getElementById('widgetCounter').innerText = `Widget Inventory: ${numOfWidgets} widgets`
   }, 3000);
-  draw()
 }
 
 function purchaseManualUpgrade(upgrade) {
@@ -39,10 +40,14 @@ function purchaseAutoUpgrade(upgrade) {
     widgetBuilder.automaticWidgets += widgetBuilder[upgrade].clickMod
     widgetBuilder[upgrade].upgradeCost += widgetBuilder[upgrade].upgradeCost
   }
-  buildAutoWidgets()
+  if (!intervalRunning) {
+    buildAutoWidgets()
+  }
+  draw()
 }
 
 function draw() {
+  debugger
   document.getElementById('widgetCounter').innerText = `Widget Inventory: ${numOfWidgets} widgets`
 
   document.getElementById('modelUpgradeCounter').innerText = `+${(widgetBuilder.model.number * widgetBuilder.model.clickMod)} production for ${widgetBuilder.model.number} Model upgrades.`
